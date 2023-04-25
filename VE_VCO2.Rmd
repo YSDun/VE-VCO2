@@ -10,7 +10,7 @@ Title: "Prognostic Role of Minute Ventilation/Carbon Dioxide Production Slope fo
 ##############################################################
 # Hypothesis and the variables of the study
 ##############################################################
-# Hypothesis: Impaired minute ventilation/carbon dioxide production slope is associated with higher risk of perioperative morbidity, and shorter relapse-free survival and overall survival in resectable patients with Non-Small-Cell Lung Cancer
+# Hypothesis: Impaired minute ventilation/carbon dioxide production slope is associated with higher risk of perioperative morbidity, and shorter relapse-free survival and overall survival in resectable patients with non-small-cell lung cancer
 
 ## Predictor: Minute Ventilation/Carbon Dioxide Production Slop (VE_VCO2_slope) ##
 # Continuous variable: VE_VCO2_slope_continuos
