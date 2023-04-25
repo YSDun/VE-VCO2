@@ -513,7 +513,7 @@ ow3_dif$estimates # To transform the unit from the event per person to event per
 # Crude complication rate difference
 # To calculate number of exposed and unexposed cases
 aggregate(x=data_na_omit$Technical_complication, by=list(data_na_omit$VE_VCO2_slope),sum)
-crude_IRD_ow3_1 <- ratedifference(22, 57, 172, 723,CRC=TRUE,conf.level = 0.95)
+crude_IRD_ow3_1 <- ratedifference(22, 57, 172, 723,CRC=TRUE,conf.level = 0.95) # ratedifference(The number of complication occurence among exposed cohort, The number of complication occurence among unexposed cohort, The observed surgery of the exposed cohort, The observed surgery of the unexposed cohort, CRC=TRUE, conf.level=0.95)
 crude_IRD_ow3_1$estimate*1000 # transform the unit from event per surgery to event per 1000 surgeries
 crude_IRD_ow3_1$conf.int*1000 # transform the unit from event per surgery to event per 1000 surgeries
 crude_IRD_ow3_1$p.value
@@ -527,7 +527,7 @@ ow3_1_dif$estimates # To transform the unit from the event per person to event p
 # Crude complication rate difference
 # To calculate number of exposed and unexposed cases
 aggregate(x=data_na_omit$Pulmonary_complication, by=list(data_na_omit$VE_VCO2_slope),sum)
-crude_IRD_ow3_2 <- ratedifference(25, 30, 172, 723,CRC=TRUE,conf.level = 0.95)
+crude_IRD_ow3_2 <- ratedifference(25, 30, 172, 723,CRC=TRUE,conf.level = 0.95) # ratedifference(The number of complication occurence among exposed cohort, The number of complication occurence among unexposed cohort, The observed surgery of the exposed cohort, The observed surgery of the unexposed cohort, CRC=TRUE, conf.level=0.95)
 crude_IRD_ow3_2$estimate*1000 # transform the unit from event per surgery to event per 1000 surgeries
 crude_IRD_ow3_2$conf.int*1000 # transform the unit from event per surgery to event per 1000 surgeries
 crude_IRD_ow3_2$p.value
@@ -541,7 +541,7 @@ ow3_2_dif$estimates # To transform the unit from the event per person to event p
 # Crude complication rate difference
 # To calculate number of exposed and unexposed cases
 aggregate(x=data_na_omit$Cardiovascular_complication, by=list(data_na_omit$VE_VCO2_slope),sum)
-crude_IRD_ow3_3 <- ratedifference(14, 20, 172, 723,CRC=TRUE,conf.level = 0.95)
+crude_IRD_ow3_3 <- ratedifference(14, 20, 172, 723,CRC=TRUE,conf.level = 0.95) # ratedifference(The number of complication occurence among exposed cohort, The number of complication occurence among unexposed cohort, The observed surgery of the exposed cohort, The observed surgery of the unexposed cohort, CRC=TRUE, conf.level=0.95)
 crude_IRD_ow3_3$estimate*1000 # transform the unit from event per surgery to event per 1000 surgeries
 crude_IRD_ow3_3$conf.int*1000 # transform the unit from event per surgery to event per 1000 surgeries
 crude_IRD_ow3_3$p.value
