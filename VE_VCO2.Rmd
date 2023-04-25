@@ -20,10 +20,10 @@ Title: "Prognostic Role of Minute Ventilation/Carbon Dioxide Production Slope fo
 ## Outcomes: the name in the manuscript, the name in the dataset, variable type ##
 # Outcome 1: Relapse-free survival, Relapse_free_survival, Categorical variable  (the date of event: Relapse_free_survival_time_to_event)
 # Outcome 2: Overall survival, Overall_survival, Categorical variable (the date of event: Overall_survival_time_to_event)
-# Outcome 3: The composite of perioperative complications, Categorical variable
-# Outcome 3.1: Technical-related complication, Categorical variable
-# Outcome 3.2: Pulmonary complication, Categorical variable
-# Outcome 3.3: Cardiovascular complication, Categorical variable
+# Outcome 3: The composite of perioperative complications, Composite_complications, Categorical variable
+# Outcome 3.1: Technical-related complication, Technical_complication, Categorical variable
+# Outcome 3.2: Pulmonary complication, Pulmonary_complication, Categorical variable
+# Outcome 3.3: Cardiovascular complication, Cardiovascular_complication, Categorical variable
 
 
 ## Covariates: the name in the dataset, variable type ##
