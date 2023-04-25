@@ -494,62 +494,60 @@ ow3_3_or_est_pval
 # Reference: Minato Nakazawa (2023). fmsb: Functions for Medical Statistics Book with some Demographic Data-Processing in R. R package version 0.7.5. https://cran.r-project.org/web/packages/fmsb
 
 ## Outcome 3: the composite of perioperative complications ##
-# To calculate number of exposed and unexposed person-time
+# To calculate number of participants in the exposed and unexposed groups
 aggregate(x=data_na_omit$JMP_ID, by=list(data_na_omit$VE_VCO2_slope),length)
 
-# To calculate number of exposed and unexposed cases
+# To calculate number of cases in exposed and unexposed groups
 aggregate(x=data_na_omit$Composite_complications, by=list(data_na_omit$VE_VCO2_slope),sum)
-crude_IRD_ow3 <- ratedifference(56, 100, 172, 723,CRC=TRUE,conf.level = 0.95) # ratedifference(The number of complication occurence among exposed cohort, The number of complication occurence among unexposed cohort, The observed surgery of the exposed cohort, The observed surgery of the unexposed cohort, CRC=TRUE, conf.level=0.95)
-crude_IRD_ow3$estimate*1000 # transform the unit from event per surgery to event per 1000 surgeries
-crude_IRD_ow3$conf.int*1000 # transform the unit from event per surgery to event per 1000 surgeries
+crude_IRD_ow3 <- ratedifference(56, 100, 172, 723,CRC=TRUE,conf.level = 0.95) 
+crude_IRD_ow3$estimate*1000 
+crude_IRD_ow3$conf.int*1000 
 crude_IRD_ow3$p.value
 
 # Weighted complication rate difference
 ow3_dif    <- summary(ow3,    type = "DIF", contrast = c(-1, 1), CI = TRUE)
-ow3_dif$estimates # To transform the unit from the event per person to event per 1000 surgeries, the estimated value and the confidence interval need to be manually multiplied by 1000
+ow3_dif$estimates 
 
 
 ## Outcome 3.1: technical-related complication ##
 # Crude complication rate difference
 # To calculate number of exposed and unexposed cases
 aggregate(x=data_na_omit$Technical_complication, by=list(data_na_omit$VE_VCO2_slope),sum)
-crude_IRD_ow3_1 <- ratedifference(22, 57, 172, 723,CRC=TRUE,conf.level = 0.95) # ratedifference(The number of complication occurence among exposed cohort, The number of complication occurence among unexposed cohort, The observed surgery of the exposed cohort, The observed surgery of the unexposed cohort, CRC=TRUE, conf.level=0.95)
-crude_IRD_ow3_1$estimate*1000 # transform the unit from event per surgery to event per 1000 surgeries
-crude_IRD_ow3_1$conf.int*1000 # transform the unit from event per surgery to event per 1000 surgeries
+crude_IRD_ow3_1 <- ratedifference(22, 57, 172, 723,CRC=TRUE,conf.level = 0.95) 
+crude_IRD_ow3_1$estimate*1000 
+crude_IRD_ow3_1$conf.int*1000 
 crude_IRD_ow3_1$p.value
 
 # Weighted complication rate difference
 ow3_1_dif    <- summary(ow3_1,    type = "DIF", contrast = c(-1, 1), CI = TRUE)
-ow3_1_dif$estimates # To transform the unit from the event per person to event per 1000 surgeries, the estimated value and the confidence interval need to be manually multiplied by 1000
-
+ow3_1_dif$estimates 
 
 ## Outcome 3.2: pulmonary complication ##
 # Crude complication rate difference
 # To calculate number of exposed and unexposed cases
 aggregate(x=data_na_omit$Pulmonary_complication, by=list(data_na_omit$VE_VCO2_slope),sum)
-crude_IRD_ow3_2 <- ratedifference(25, 30, 172, 723,CRC=TRUE,conf.level = 0.95) # ratedifference(The number of complication occurence among exposed cohort, The number of complication occurence among unexposed cohort, The observed surgery of the exposed cohort, The observed surgery of the unexposed cohort, CRC=TRUE, conf.level=0.95)
-crude_IRD_ow3_2$estimate*1000 # transform the unit from event per surgery to event per 1000 surgeries
-crude_IRD_ow3_2$conf.int*1000 # transform the unit from event per surgery to event per 1000 surgeries
+crude_IRD_ow3_2 <- ratedifference(25, 30, 172, 723,CRC=TRUE,conf.level = 0.95) 
+crude_IRD_ow3_2$estimate*1000 
+crude_IRD_ow3_2$conf.int*1000 
 crude_IRD_ow3_2$p.value
 
 # Weighted complication rate difference
 ow3_2_dif    <- summary(ow3_2,    type = "DIF", contrast = c(-1, 1), CI = TRUE)
-ow3_2_dif$estimates # To transform the unit from the event per person to event per 1000 surgeries, the estimated value and the confidence interval need to be manually multiplied by 1000
+ow3_2_dif$estimates 
 
 
 ## outcome 3.3: cardiovascular complication##
 # Crude complication rate difference
 # To calculate number of exposed and unexposed cases
 aggregate(x=data_na_omit$Cardiovascular_complication, by=list(data_na_omit$VE_VCO2_slope),sum)
-crude_IRD_ow3_3 <- ratedifference(14, 20, 172, 723,CRC=TRUE,conf.level = 0.95) # ratedifference(The number of complication occurence among exposed cohort, The number of complication occurence among unexposed cohort, The observed surgery of the exposed cohort, The observed surgery of the unexposed cohort, CRC=TRUE, conf.level=0.95)
-crude_IRD_ow3_3$estimate*1000 # transform the unit from event per surgery to event per 1000 surgeries
-crude_IRD_ow3_3$conf.int*1000 # transform the unit from event per surgery to event per 1000 surgeries
+crude_IRD_ow3_3 <- ratedifference(14, 20, 172, 723,CRC=TRUE,conf.level = 0.95) 
+crude_IRD_ow3_3$estimate*1000 
+crude_IRD_ow3_3$conf.int*1000 
 crude_IRD_ow3_3$p.value
 
 # Weighted complication rate difference
 ow3_3_dif    <- summary(ow3_3,    type = "DIF", contrast = c(-1, 1), CI = TRUE)
-ow3_3_dif$estimates # To transform the unit from the event per person to event per 1000 surgeries, the estimated value and the confidence interval need to be manually multiplied by 1000
-
+ow3_3_dif$estimates 
 
 ```
 
