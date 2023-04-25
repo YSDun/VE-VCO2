@@ -786,10 +786,10 @@ ggsave(file = "Overall_survival.pdf", Overall_survival, width = 16, height = 8.5
 ## Covariates interaction tests ##
 # We conducted a significant test to determine the impact of the imteraction between each of the 18 covariates and the predictor on the oucomes. In order to demonstrated the analytical code utilized in these tests, we used the covariate of "Sex" as an example. This is done for the sake of brevity in report.
 data_na_omit$Sex_num <- as.numeric(data_na_omit$Sex)
-out_outcome1_interaction_test_sex<-Relapse_free_survival~Sex+Age+Height+weight+Smoking_ever+Histology+T+N+Type_of_lung_resection+Hypertension+Dyslipidemia+Diabetes+Coronary_artery_disease+Cerebrovascular_disease+Tuberculosis+Emphysema+Bronchitis+Chronic_obstructive_pulmonary_disease+Sex_num*VE_VCO2_slope
+out_outcome1_interaction_test_sex<-Relapse_free_survival~VE_VCO2_slope+Sex+Age+Height+weight+Smoking_ever+Histology+T+N+Type_of_lung_resection+Hypertension+Dyslipidemia+Diabetes+Coronary_artery_disease+Cerebrovascular_disease+Tuberculosis+Emphysema+Bronchitis+Chronic_obstructive_pulmonary_disease+Sex_num*VE_VCO2_slope
 glm_interaction_test_sex<-glm(out_outcome1_interaction_test_sex, data=data_na_omit, weight=ow1_est$psweights)
 p_sex <- coef(summary(glm_interaction_test_sex))[,4]
-p_sex['Sex_num:VE_VCO2_slope1']
+p_sex['VE_VCO2_slope1:Sex_num']
 
 
 ## Subgroup analyses ##
