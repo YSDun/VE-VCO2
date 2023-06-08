@@ -296,6 +296,7 @@ love.plot(ps.formula, data = data_na_omit, abs = TRUE, weights = ow1_est$psweigh
           drop.distance = TRUE,
           thresholds = c(m = .1),
           var.names = new.names,
+          binary = "std",
           line=TRUE,
           sample.names = c("Unweighted", "PS Weighted"),
           limits = c(0, .82),
